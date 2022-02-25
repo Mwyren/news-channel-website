@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Mirza&family=Catamaran&display=swap');
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+video{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.marquee{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(242, 0, 255, 0.5);
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee .text{
+  font-size: 2rem;
+  font-family: 'Catamaran';
+  padding-left: 100%;
+  display: inline-block;
+  color: #fff;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  100%{
+    transform: translate(-100%, 0);
+  }
+}
+
+.title{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('https://pngimg.com/uploads/moon/small/moon_PNG12.png');
+  background-size: cover;
+  color: #fff;
+  font-family: 'Mirza', sans-serif;
+  font-size: 1.5rem;
+  width: 250px;
+  height: 280px;
+  font-weight: bold;
+  color: #fff;
+}
+
+span{
+  display: inline-block;
+}
+
+.l1{
+  animation: blink 3s 0.10s linear infinite;
+}
+
+.l2{
+  animation: blink 3s 0.15s linear infinite;
+}
+
+.l3{
+  animation: blink 3s 0.20s linear infinite;
+}
+
+.l4{
+  animation: blink 3s 0.25s linear infinite;
+}
+
+.l5{
+  animation: blink 3s 0.30s linear infinite;
+}
+
+.l6{
+  animation: blink 3s 0.35s linear infinite;
+}
+
+.l7{
+  animation: blink 3s 0.40s linear infinite;
+}
+
+@keyframes blink {
+  from{
+    transform: scale(0);
+  }
+
+  to{
+    transform: scale(1);
+  }
+}
+
+.navigation{
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 15vw;
+  background: url('https://pngimg.com/uploads/star/star_PNG76835.png'), linear-gradient(90deg, rebeccapurple, rgba(242, 0, 255, 0.1));
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.navigation ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.navigation ul li{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.navigation a{
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.7s ease-in-out;
+}
+
+.navigation ul a:hover{
+  transform: scale(1.5);
+}
+
+.infos{
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.infos figure{
+  display: flex;
+  flex-flow: column;
+  margin: 0 10px;
+  width: 210px;
+  height: 180px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+}
+
+.infos figure.f1{
+  animation: pulseImage 3s 0.20s linear infinite;
+}
+
+.infos figure.f2{
+  animation: pulseImage 3s 0.30s linear infinite;
+}
+
+.infos figure.f3{
+  animation: pulseImage 3s 0.40s linear infinite;
+}
+
+.infos figure.f4{
+  animation: pulseImage 3s 0.50s linear infinite;
+}
+
+.infos figure.f5{
+  animation: pulseImage 3s 0.60s linear infinite;
+}
+
+@keyframes pulseImage {
+  from{
+    transform: scale(0.95);
+  }
+
+  to{
+    transform: scale(1);
+  }
+}
+
+.infos figcaption{
+  background-color: rgba(99, 32, 165, 0.5);
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  text-align: center;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.infos img{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 1500px) {
+  .infos figure{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .infos .f1, .infos .f2{
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .infos .f3, .infos .f4{
+    display: none;
+  }
+
+  .navigation{
+    width: 40vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 0.8rem;
+    width: 150px;
+    height: 180px;
+  }
+}
